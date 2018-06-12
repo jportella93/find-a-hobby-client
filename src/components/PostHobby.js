@@ -11,9 +11,9 @@ class PostHobby extends Component {
       getStarted: '',
       picture: '',
       bars: {
-        money: 0,
-        fit: 0,
-        creative: 0,
+        money: 33,
+        fit: 33,
+        creative: 34,
       },
       totalValue: 100
     }
@@ -59,9 +59,6 @@ class PostHobby extends Component {
         }
       })
     })
-    console.log(event.target);
-    console.log(event.target.type);
-    console.log(event.target.value);
   }
 
   formatBarValues = (barValue) => {
@@ -73,7 +70,6 @@ class PostHobby extends Component {
   handleSubmit = (event) => {
     const hobby = this.state;
 
-// TODO: Fix sliders not showing on mobile.
     const formattedHobby = {
       name: hobby.name,
       description: hobby.description,
@@ -111,30 +107,43 @@ class PostHobby extends Component {
         <form onSubmit={this.handleSubmit}>
           <br />
           <input
+            type="text"
             name="name"
             placeholder="Name"
-            type="text"
+            maxLength="14"
+            minLength="1"
+            autoFocus
+            required
             value={this.state.name}
             onChange={this.handleInputChange} />
           <br />
           <input
+            type="text"
             name="description"
             placeholder="Description"
-            type="text"
+            maxLength="140"
+            minLength="1"
+            required
             value={this.state.description}
             onChange={this.handleInputChange} />
           <br />
           <input
-            name="getStarted"
-            placeholder="Link to get started tutorial"
             type="text"
+            name="getStarted"
+            placeholder="Tutorial. e.g. https://archery.com/tutorial"
+            required
+            minLength="1"
+            pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)"
             value={this.state.getStarted}
             onChange={this.handleInputChange} />
           <br />
           <input
-            name="picture"
-            placeholder="Link to picture"
             type="text"
+            name="picture"
+            placeholder="Picture e.g. https://vegan.me/soup.jpg"
+            required
+            minLength="1"
+            pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)\.(png)?(jpg)?(gif)?(tiff)?(bmp)?"
             value={this.state.picture}
             onChange={this.handleInputChange} />
           <br />
@@ -142,7 +151,6 @@ class PostHobby extends Component {
             <label className='money-label'>
               <i className="fas fa-dollar-sign"></i>
             </label>
-            {/* <br /> */}
             <input
               name="money"
               type="range"
@@ -155,7 +163,6 @@ class PostHobby extends Component {
             <label className='fit-label'>
               <i className="fas fa-football-ball"></i>
             </label>
-            {/* <br /> */}
             <input
               name="fit"
               type="range"
@@ -168,7 +175,6 @@ class PostHobby extends Component {
             <label className='creative-label'>
               <i className="fab fa-fly"></i>
             </label>
-            {/* <br /> */}
             <input
               name="creative"
               type="range"
