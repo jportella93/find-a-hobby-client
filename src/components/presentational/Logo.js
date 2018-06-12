@@ -12,6 +12,10 @@ class Logo extends Component {
         </div>
         <div className='Logo'>
           <h1>find a Hobby!</h1>
+          <br />
+          <i className="fas fa-dollar-sign"></i>
+          <i className="fas fa-football-ball"></i>
+          <i className="fab fa-fly"></i>
         </div>
       </div>
     )
