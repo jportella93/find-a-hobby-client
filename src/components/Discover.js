@@ -39,6 +39,11 @@ class Discover extends Component {
 
     randomHobbies = discardSeenHobbies(randomHobbies, seenHobbies);
 
+    if (randomHobbies.length === 0) {
+      randomHobbies = await ApiClient.getRandomHobbies();
+      randomHobbies = discardSeenHobbies(randomHobbies, seenHobbies);
+    }
+
     // console.log('setting new hobbies:',randomHobbies);
     this.setState({hobbies: [...randomHobbies, ...this.state.hobbies]});
   }
