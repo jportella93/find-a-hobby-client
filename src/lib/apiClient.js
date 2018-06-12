@@ -1,5 +1,5 @@
 import getUniqRandomIntArr from './getUniqRandomIntArr';
-const URL = 'http://localhost:3000';
+export const URL = 'http://192.168.1.191:3000'
 
 let token = localStorage.getItem('token');
 
@@ -45,6 +45,7 @@ const getRandomHobbies = async () => {
 const getRecommendedHobbies = async () => {
   let hobbies = await apiFetch(`/hobbies/rec:${token}`);
   // console.log('now fetching recommended hobbies');
+  // console.log(hobbies);
 
   return hobbies;
 }
