@@ -129,6 +129,7 @@ class FetchingHobbiesSpinner extends Component {
             keySplines=".6 .01 .36 .99; .6 .01 .36 .99;"
           keyTimes="0; 0.5; 1" to="60" dur=".5s" repeatCount="indefinite" />
         </svg>
+        <h2>Those were all the hobbies <br/> in the database! <br /> What about posting one?</h2>
       </div>
         );
         }
