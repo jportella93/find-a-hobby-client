@@ -14,4 +14,6 @@ https://codepen.io/arxyz/pen/NMYEyX?page=4
 .FetchingHobbiesSpinner h2 {
   position: absolute;
   top: 30%;
+  left: 0;
+  right: 0;
 }
