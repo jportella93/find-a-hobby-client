@@ -61,3 +61,7 @@ i {
    -o-font-smoothing:antialiased;
    font-smoothing:antialiased;
 }
+
+i.fas.fa-times {
+  margin: 0;
+}
