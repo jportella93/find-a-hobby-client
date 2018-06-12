@@ -9,3 +9,5 @@ export const URL = 'http://localhost:3000'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
+
+// TODO: fetch hobbies when rendering firts view, not when rendering Discover.

@@ -49,7 +49,6 @@ class App extends Component {
   }
 
   changeViewAfterLogo = () => {
-    console.log('hey');
     this.state.newUser
     ? this.setState({currentView: 'Presentation'})
     : this.setState({currentView: 'Discover'})

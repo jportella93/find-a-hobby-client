@@ -24,6 +24,7 @@ class Discover extends Component {
   }
 
   setHobbies = async () => {
+    // BUG: Only receiving some of the hobbies
     const hobbiesLGTH = this.state.hobbies.length
     if (hobbiesLGTH > neededCardsLeftToRefresh) return;
 
@@ -38,9 +39,8 @@ class Discover extends Component {
 
     randomHobbies = discardSeenHobbies(randomHobbies, seenHobbies);
 
-    console.log('setting new hobbies:',randomHobbies);
+    // console.log('setting new hobbies:',randomHobbies);
     this.setState({hobbies: [...randomHobbies, ...this.state.hobbies]});
-
   }
 
   handleOnLike = () => {

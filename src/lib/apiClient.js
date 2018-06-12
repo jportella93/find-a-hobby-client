@@ -44,7 +44,7 @@ const getRandomHobbies = async () => {
 
 const getRecommendedHobbies = async () => {
   let hobbies = await apiFetch(`/hobbies/rec:${token}`);
-  console.log('now fetching recommended hobbies');
+  // console.log('now fetching recommended hobbies');
 
   return hobbies;
 }
