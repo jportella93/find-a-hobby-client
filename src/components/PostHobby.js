@@ -15,7 +15,8 @@ class PostHobby extends Component {
         fit: 33,
         creative: 34,
       },
-      totalValue: 100
+      totalValue: 100,
+      submitted:false
     }
   }
 
@@ -67,7 +68,7 @@ class PostHobby extends Component {
     return barValue
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     const hobby = this.state;
 
     const formattedHobby = {
@@ -98,6 +99,8 @@ class PostHobby extends Component {
 
     apiClient.postHobby(formattedHobby);
 
+    this.setState({submitted:true});
+
     event.preventDefault();
   }
 
@@ -112,7 +115,6 @@ class PostHobby extends Component {
             placeholder="Name"
             maxLength="14"
             minLength="1"
-            autoFocus
             required
             value={this.state.name}
             onChange={this.handleInputChange} />
@@ -186,7 +188,10 @@ class PostHobby extends Component {
             <br />
           </div>
           <input type="submit" value="Submit" />
-        </form>
+          {this.state.submitted
+            ? <h2 className="tick">✅</h2>
+            : null}
+          </form>
       </div>
     )
   }

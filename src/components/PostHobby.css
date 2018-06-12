@@ -58,6 +58,7 @@ input[type="submit"] {
   border: solid 1px gray;
   background-color: white;
   border-radius: 10px;
+  float: right;
 }
 
 .tag-sliders {
@@ -93,4 +94,8 @@ input[type="submit"] {
 
 .PostHobby i {
   margin: 0;
+}
+
+.PostHobby .tick {
+  text-align: center;
 }

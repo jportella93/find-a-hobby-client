@@ -18,13 +18,13 @@ class Discover extends Component {
     super(props);
     this.state = {
       hobbies : [],
-      noHobbies: false
+      noHobbies: false,
+      loading: true,
     }
     this.setHobbies();
   }
 
   setHobbies = async () => {
-    // BUG: Only receiving some of the hobbies
     const hobbiesLGTH = this.state.hobbies.length
     if (hobbiesLGTH > neededCardsLeftToRefresh) return;
 
@@ -45,7 +45,11 @@ class Discover extends Component {
     }
 
     // console.log('setting new hobbies:',randomHobbies);
-    this.setState({hobbies: [...randomHobbies, ...this.state.hobbies]});
+    this.setState({
+      hobbies: [...randomHobbies, ...this.state.hobbies],
+      loading: false
+    });
+    this.handleNoHobbies()
   }
 
   handleOnLike = () => {
@@ -75,7 +79,10 @@ class Discover extends Component {
 
   handleNoHobbies = () => {
     if (this.state.hobbies.length !== 0) return;
-    this.setState({noHobbies: true})
+    this.setState({
+      noHobbies: true,
+      loading:true
+    })
   }
 
   render() {
@@ -84,8 +91,8 @@ class Discover extends Component {
         {this.state.hobbies.map(hobby => {
           return <HobbyCard key={hobby._id} hobby={hobby}/>
         })}
-        {this.state.noHobbies
-          ? <FetchingHobbiesSpinner />
+        {this.state.loading
+          ? <FetchingHobbiesSpinner noHobbies={this.state.noHobbies} />
           : <SwipeButtons onLike={this.handleOnLike}
             onDislike={this.handleOnDislike}/>}
       </div>

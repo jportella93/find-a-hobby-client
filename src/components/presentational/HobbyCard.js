@@ -13,30 +13,32 @@ class HobbyCard extends Component {
 
   render() {
     return (
-      <div className="HobbyCard">
-        <div className='colorHolderWrapper'>
-          <div className='color1 topBar'>
-            <i className="fas fa-dollar-sign"></i>
+      <div className="HobbyCard-wrapper">
+        <div className="HobbyCard">
+          <div className='colorHolderWrapper'>
+            <div className='color1 topBar'>
+              <i className="fas fa-dollar-sign"></i>
+            </div>
+            <div className='color2 topBar'>
+              <i className="fas fa-football-ball"></i>
+            </div>
+            <div className='color3 topBar'>
+              <i className="fab fa-fly"></i>
+            </div>
           </div>
-          <div className='color2 topBar'>
-            <i className="fas fa-football-ball"></i>
-          </div>
-          <div className='color3 topBar'>
-            <i className="fab fa-fly"></i>
-          </div>
-        </div>
 
-        <div className='colorHolder'
-          style={{'gridTemplateColumns': `${this.state.money}%
+          <div className='colorHolder'
+            style={{'gridTemplateColumns': `${this.state.money}%
           ${this.state.fit}% ${this.state.creative}%`}}>
-          <div className='color1 colorBar'></div>
-          <div className='color2 colorBar'></div>
-          <div className='color3 colorBar'></div>
-        </div>
+            <div className='color1 colorBar'></div>
+            <div className='color2 colorBar'></div>
+            <div className='color3 colorBar'></div>
+          </div>
           <img src={this.props.hobby.pictures[0].big}
             alt={this.props.hobby.name}/>
           <h1>{this.props.hobby.name}</h1>
-        <p>{this.props.hobby.description}</p>
+          <p>{this.props.hobby.description}</p>
+        </div>
       </div>
     );
   }
