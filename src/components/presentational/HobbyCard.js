@@ -11,12 +11,6 @@ class HobbyCard extends Component {
     }
   }
 
-  calculateBars = () => {
-    const money = this.state.money
-    const fit = this.state.fit
-    const creative = this.state.creative
-  }
-
   render() {
     return (
       <div className="HobbyCard">
