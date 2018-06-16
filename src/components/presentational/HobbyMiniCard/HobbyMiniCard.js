@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './HobbyMiniCard.css'
 
-class HobbyMiniCard extends Component {
+export default class HobbyMiniCard extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -47,5 +47,3 @@ class HobbyMiniCard extends Component {
   //   );
   // }
 }
-
-export default HobbyMiniCard;

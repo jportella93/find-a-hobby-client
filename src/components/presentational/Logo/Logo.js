@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Logo.css'
 
-class Logo extends Component {
+export default class Logo extends Component {
   render () {
     return (
       <div onClick={this.props.handleClick} className='Logo-wrapper'>
@@ -23,5 +23,3 @@ class Logo extends Component {
 }
 
 // TODO: add number of hobbies available in database under the logo.
-
-export default Logo;

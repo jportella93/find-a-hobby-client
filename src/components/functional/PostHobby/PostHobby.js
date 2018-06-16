@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import apiClient from '../lib/apiClient';
+import apiClient from '../../../lib/apiClient';
 import './PostHobby.css';
 
-class PostHobby extends Component {
+export default class PostHobby extends Component {
   constructor (props) {
     super (props);
     this.state = {
@@ -196,5 +196,3 @@ class PostHobby extends Component {
     )
   }
 }
-
-export default PostHobby;

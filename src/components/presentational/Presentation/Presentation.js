@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Presentation.css'
 
-class Presentation extends Component {
+export default class Presentation extends Component {
   render () {
     return (
       <div onClick={this.props.handleClick} className='Presentation-wrapper'>
@@ -31,5 +31,3 @@ class Presentation extends Component {
     )
   }
 }
-
-export default Presentation;

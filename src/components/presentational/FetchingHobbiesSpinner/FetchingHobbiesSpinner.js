@@ -7,7 +7,7 @@ by free potato tree
 https://codepen.io/arxyz/pen/NMYEyX?page=4
 */
 
-class FetchingHobbiesSpinner extends Component {
+export default class FetchingHobbiesSpinner extends Component {
   render() {
     return (
       <div className="FetchingHobbiesSpinner">
@@ -137,5 +137,3 @@ class FetchingHobbiesSpinner extends Component {
         );
         }
 }
-
-export default FetchingHobbiesSpinner;

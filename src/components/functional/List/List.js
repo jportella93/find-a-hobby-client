@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './List.css'
-import HobbyMiniCard from './presentational/HobbyMiniCard'
+import HobbyMiniCard from '../../presentational/HobbyMiniCard'
 
-class List extends Component {
-// TODO: add message: no hobbies liked yet
+export default class List extends Component {
   render() {
     return (
       <div className="List">
@@ -16,5 +15,3 @@ class List extends Component {
     );
   }
 }
-
-export default List;

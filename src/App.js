@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+import Discover from './components/functional/Discover'
+import List from './components/functional/List'
+import PostHobby from './components/functional/PostHobby'
 import Logo from './components/presentational/Logo'
 import Presentation from './components/presentational/Presentation'
-import Discover from './components/Discover'
-import List from './components/List'
-import PostHobby from './components/PostHobby'
 import Navbar from './components/presentational/Navbar'
 
 import ApiClient from './lib/apiClient';

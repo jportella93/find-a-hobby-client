@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import './Discover.css';
-import HobbyCard from './presentational/HobbyCard'
-import SwipeButtons from './presentational/SwipeButtons'
-import FetchingHobbiesSpinner from './presentational/FetchingHobbiesSpinner'
+import HobbyCard from '../../presentational/HobbyCard'
+import SwipeButtons from '../../presentational/SwipeButtons'
+import FetchingHobbiesSpinner from '../../presentational/FetchingHobbiesSpinner'
 
-import ApiClient from '../lib/apiClient';
-import discardSeenHobbies from '../functions/discardSeenHobbies';
-import filterHobby from '../functions/filterHobby';
-import getRandHobbyFilteredRec from '../functions/getRandHobbyFilteredRec';
+import ApiClient from '../../../lib/apiClient';
+import discardSeenHobbies from '../../../functions/discardSeenHobbies';
+import filterHobby from '../../../functions/filterHobby';
+import getRandHobbyFilteredRec from '../../../functions/getRandHobbyFilteredRec';
 
-export const numberOfCards = 3;
+const numberOfCards = 3;
 const neededCardsLeftToRefresh = 2;
 const neededCardsPriorRec = 1;
 
-class Discover extends Component {
+export default class Discover extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -99,8 +99,3 @@ class Discover extends Component {
     );
   }
 }
-
-// BUG: when going to List view and coming back to discover view, hobbies are gone
-// TODO: add message "no more hobbies available, maybe post a hobby?"
-
-export default Discover;

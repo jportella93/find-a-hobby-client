@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, ButtonGroup } from 'reactstrap';
 import './Navbar.css'
 
-class Navbar extends Component {
+export default class Navbar extends Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -27,5 +27,3 @@ class Navbar extends Component {
     );
   }
 }
-
-export default Navbar;
