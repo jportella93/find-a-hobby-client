@@ -2,7 +2,6 @@
 @import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);
 
 .PostHobby form {
-  /* background-color: red; */
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -38,13 +37,13 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 input[type=range][name=money]::-webkit-slider-thumb {
-  background: var(--color1);
+  background: var(--p1-color1);
 }
 input[type=range][name=fit]::-webkit-slider-thumb {
-  background: var(--color2);
+  background: var(--p1-color2);
 }
 input[type=range][name=creative]::-webkit-slider-thumb {
-  background: var(--color3);
+  background: var(--p1-color3);
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -68,7 +67,7 @@ input[type="submit"] {
 }
 
 .money-label {
-  background-color: var(--color1);
+  background-color: var(--p1-color1);
   padding: 20px 0;
   border-radius: 15px;
   width: 100px;
@@ -77,7 +76,7 @@ input[type="submit"] {
 }
 
 .fit-label {
-  background-color: var(--color2);
+  background-color: var(--p1-color2);
   padding: 20px 0;
   border-radius: 15px;
   width: 100px;
@@ -85,7 +84,7 @@ input[type="submit"] {
 }
 
 .creative-label {
-  background-color: var(--color3);
+  background-color: var(--p1-color3);
   padding: 20px 0;
   border-radius: 15px;
   width: 100px;

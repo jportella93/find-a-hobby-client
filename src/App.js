@@ -7,8 +7,6 @@ import Logo from './components/presentational/Logo'
 import Presentation from './components/presentational/Presentation'
 import Navbar from './components/presentational/Navbar'
 
-import ApiClient from './lib/apiClient';
-
 class App extends Component {
   constructor (props) {
     super (props);
@@ -53,8 +51,6 @@ class App extends Component {
     ? this.setState({currentView: 'Presentation'})
     : this.setState({currentView: 'Discover'})
   }
-
-
 
   render() {
     let view;

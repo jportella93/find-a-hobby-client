@@ -6,8 +6,6 @@ import FetchingHobbiesSpinner from '../../presentational/FetchingHobbiesSpinner'
 
 import ApiClient from '../../../lib/apiClient';
 import discardSeenHobbies from '../../../functions/discardSeenHobbies';
-import filterHobby from '../../../functions/filterHobby';
-import getRandHobbyFilteredRec from '../../../functions/getRandHobbyFilteredRec';
 
 const numberOfCards = 3;
 const neededCardsLeftToRefresh = 2;

@@ -15,13 +15,13 @@
   height: -webkit-fill-available;
 }
 .Logo-wrapper.color1 {
-  background-color: var(--color1)
+  background-color: var(--p1-color1)
 }
 .Logo-wrapper.color2 {
-  background-color: var(--color2)
+  background-color: var(--p1-color2)
 }
 .Logo-wrapper.color3 {
-  background-color: var(--color3)
+  background-color: var(--p1-color3)
 }
 
 

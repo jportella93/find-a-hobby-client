@@ -11,12 +11,6 @@ export default class HobbyMiniCard extends Component {
     }
   }
 
-  calculateBars = () => {
-    const money = this.state.money
-    const fit = this.state.fit
-    const creative = this.state.creative
-  }
-
   render() {
     return (
       <a href={this.props.hobby.links[0].getStarted} target="_blank" >
@@ -35,15 +29,4 @@ export default class HobbyMiniCard extends Component {
       </a>
     );
   }
-  // render() {
-  //   return (
-  //     <a href={this.props.hobby.links[0].getStarted}>
-  //       <div className="HobbyMiniCard">
-  //         <img src={this.props.hobby.pictures[0].thumbnail}
-  //           alt={this.props.hobby.name}/>
-  //         <h2>{this.props.hobby.name}</h2>
-  //       </div>
-  //     </a>
-  //   );
-  // }
 }

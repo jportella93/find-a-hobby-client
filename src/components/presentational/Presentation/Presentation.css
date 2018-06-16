@@ -17,13 +17,13 @@
   height: -webkit-fill-available;
 }
 .Presentation-wrapper.color1 {
-  background-color: var(--color1)
+  background-color: var(--p1-color1)
 }
 .Presentation-wrapper.color2 {
-  background-color: var(--color2)
+  background-color: var(--p1-color2)
 }
 .Presentation-wrapper.color3 {
-  background-color: var(--color3)
+  background-color: var(--p1-color3)
 }
 
 .Presentation {

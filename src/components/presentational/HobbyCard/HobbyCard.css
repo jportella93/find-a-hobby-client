@@ -1,15 +1,10 @@
 @import url(https://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
 @import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);
+@import '../../../styles/colors.css';
 
 :root {
   --img-size: 400px;
   --card-height: 600px;
-  --color1: #FDC63F;
-  --color2: #090B4D;
-  --color3: #F90005;
-  --p2-color1: yellow;
-  --p2-color2: cyan;
-  --p2-color3: magenta;
 }
 
 .HobbyCard-wrapper {
@@ -56,15 +51,15 @@
 }
 
 .color1 {
-  background-color: var(--color1);
+  background-color: var(--p1-color1);
 }
 
 .color2 {
-  background-color: var(--color2);
+  background-color: var(--p1-color2);
 }
 
 .color3 {
-  background-color: var(--color3);
+  background-color: var(--p1-color3);
 }
 
 .HobbyCard img {

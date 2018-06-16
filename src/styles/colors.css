@@ -1,0 +1,11 @@
+:root {
+  /*  Palette 1 */
+  --p1-color1: #FDC63F;
+  --p1-color2: #090B4D;
+  --p1-color3: #F90005;
+
+  /*  Palette 2 */
+  --p2-color1: yellow;
+  --p2-color2: cyan;
+  --p2-color3: magenta;
+}
