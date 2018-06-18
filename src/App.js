@@ -79,12 +79,12 @@ class App extends Component {
 
     return (
       <div className="App">
-        {this.state.currentView === 'Presentation' ||
+        {/* {this.state.currentView === 'Presentation' ||
           this.state.currentView === 'Logo'
             ? null
-          : <Navbar changeView={this.changeView}
-            currentView={this.state.currentView}/>
-        }
+            : <Navbar changeView={this.changeView}
+          currentView={this.state.currentView}/>
+        } */}
         {view}
       </div>
     );

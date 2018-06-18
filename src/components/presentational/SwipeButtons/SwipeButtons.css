@@ -65,3 +65,30 @@ i {
 i.fas.fa-times {
   margin: 0;
 }
+
+@media only screen and (min-width: 768px) {
+    /* tablets and desktop */
+}
+
+@media only screen and (max-width: 815px) {
+    /* phones */
+}
+
+@media only screen and (max-width: 415px) and (orientation: portrait) {
+    /* portrait phones */
+    .like {
+      background: white;
+    }
+
+    .like i {
+      color: #F90005;
+    }
+
+    .dislike {
+      background: white;
+    }
+
+    .dislike i {
+      color: black;
+    }
+}
