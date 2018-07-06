@@ -59,18 +59,18 @@
 1. Clone the repo
 
 ```
-git clone https://github.com/jportella93/find-a-hobby-client.git
-cd find-a-hobby-client
+$ git clone https://github.com/jportella93/find-a-hobby-client.git
+$ cd find-a-hobby-client
 ```
 
 2. Install dependencies
 ```
-npm install
+$ npm install
 ```
 
 3. Start development server
 ```
-npm run main
+$ npm run main
 ```
 
 4. Connect client with server.
@@ -79,12 +79,11 @@ Now you will be able to post and like hobbies with the deployed production datab
 
 If you want to use a clean local and fast database (recommended for development): 
 1. start development server following instructions of https://github.com/jportella93/find-a-hobby-server
-2. In /src/lib/apiClient.js, change const URL to point to your local server. For example const URL = 'http://192.168.1.191:3000'
+2. In /src/lib/apiClient.js, change the variable URL to point to your IP address followed by the port where you are runnning the server. For example: const URL = 'http://192.168.1.191:3000'
 
 ## Built with
 
 * [React](https://github.com/facebook/react) - Front end library for building user interfaces
-* [Reccomendation Raccoon](https://github.com/guymorita/recommendationRaccoon) - Recommendation engine.
 * [Bootstrap](https://github.com/twbs/bootstrap) - Framework for UI elements.
 * [Onsenui](https://github.com/OnsenUI/OnsenUI) - Mobile friendly framework for responsive elements.
 * [Font Awesome](https://fontawesome.com/) - Icons library. Used for the football ball, dollar sign and ballon icons.
