@@ -2,8 +2,8 @@
 @import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);
 
 .box{
-  width: 100px;
-  height: 100px;
+  width: 12vh;
+  height: 12vh;
   /* font-size: 13px; */
   /* display: block; */
   border-radius: 100%;
@@ -31,7 +31,6 @@
 
 a.box {
   text-decoration: none;
-  color: #fff;
   -webkit-transition: -webkit-transform 0.1s;
   overflow: hidden;
   display: flex;
@@ -47,6 +46,7 @@ a.box:active{
 	-webkit-transform: scale(1);
 }
 
+/* This is affecting other icons, TODO: scope it */
 i {
   font-size: 60px;
   text-align: center;
@@ -60,6 +60,10 @@ i {
    -ms-font-smoothing:antialiased;
    -o-font-smoothing:antialiased;
    font-smoothing:antialiased;
+}
+
+.SwipeButtons i {
+  font-size: 7vh;
 }
 
 i.fas.fa-times {

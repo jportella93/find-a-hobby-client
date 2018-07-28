@@ -21,29 +21,26 @@
   color: white;
 }
 
-.colorHolderWrapper {
+.HobbyCard__topBar-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  border-bottom: solid white 2px
-}
-
-.colorHolder {
-  width: 100%;
-  height: inherit;
-  display: grid;
-  grid-template-columns: 20% 30% auto;
-  position: absolute;
-  z-index: -100;
-  overflow: hidden;
+  border-bottom: solid white 2px;
+  height: 8vh;
 }
 
 .topBar {
   padding-bottom: 5px;
 }
 
-.topBar i {
-  font-size: 45px;
+/* Reset of conflicting classes with the i*/
+.topBar i, .topBar>i.fab.fa-fly {
+  font-size: 5.9vh;
+  background-color: inherit;
+  box-shadow: none;
+  margin-top: 10px;
+  width: inherit;
+  height: inherit;
 }
 
 .color1 {
@@ -58,21 +55,62 @@
   background-color: var(--p1-color3);
 }
 
-.HobbyCard img {
-  object-fit:cover;
-  width: calc(100% - 10px);
-  height: 400px;
-  margin-top: 10px;
+.colorHolder {
+  width: 100%;
+  height: inherit;
+  display: grid;
+  grid-template-columns: 20% 30% auto;
+  position: absolute;
+  z-index: -100;
+  overflow: hidden;
+}
+
+.HobbyCard__img {
+  /* object-fit:cover; */
+  /* width: 1fr; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* height: 100%; */
+  margin: 10px;
   border: white solid 2px;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.HobbyCard__color-holder-mask {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+4,0+4,0.65+58 */
+
+background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0.65) 58%, rgba(0, 0, 0, 0.65) 100%);
+/* FF3.6-15 */
+
+background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0.65) 58%, rgba(0, 0, 0, 0.65) 100%);
+/* Chrome10-25,Safari5.1-6 */
+
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 4%, rgba(0, 0, 0, 0.65) 58%, rgba(0, 0, 0, 0.65) 100%);
+/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+/* IE6-9 */
+
+/* height: inherit; */
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+text-align: left;
+padding: 2vh;
+padding-top: 10vh;
 }
 
 .HobbyCard h1 {
-  margin: 10px 0 0 0;
-  font-size: 35px;
+  /* margin: 10px 0 0 0; */
+  font-size: 5vh;
 }
 
 .HobbyCard p {
-  font-size: 20px;
+  font-size: 2.5vh;
+  margin: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -85,8 +123,8 @@
 
 @media only screen and (max-width: 415px) and (orientation: portrait) {
     /* portrait phones */
-  .HobbyCard img {
-    height: 400px;
+  .HobbyCard__img {
+    height: 75vh;
   }
   .HobbyCard {
     height: -webkit-fill-available;

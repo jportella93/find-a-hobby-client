@@ -38,6 +38,14 @@
   color: white;
 }
 
+/* Reset of conflicting classes with the i*/
 .Logo i {
   margin: 40px;
+  overflow:unset;
+  vertical-align: unset;
+  font-size: 50px;
+  background-color: inherit;
+  box-shadow: none;
+  width: inherit;
+  height: inherit;
 }

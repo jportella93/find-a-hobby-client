@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Page, Toolbar, ToolbarButton, Splitter, SplitterSide, SplitterContent,
+ListItem, Icon } from 'react-onsenui';
 import './App.css';
 import Discover from './components/functional/Discover'
 import List from './components/functional/List'
@@ -16,6 +18,7 @@ class App extends Component {
       seenHobbies: [],
       currentView: 'Logo',
       newUser: true,
+      sideMenuIsOpen: false
     }
     this.watchForNewUser();
   }
@@ -52,6 +55,18 @@ class App extends Component {
     : this.setState({currentView: 'Discover'})
   }
 
+  handleSideMenuItemClick = () => {
+    this.hide();
+  }
+
+  hide = () => {
+    this.state = {...this.state, sideMenuIsOpen: false};
+  }
+
+  show = () => {
+    this.state = {...this.state, sideMenuIsOpen: true};
+  }
+
   render() {
     let view;
     switch (this.state.currentView) {
@@ -85,11 +100,45 @@ class App extends Component {
             : <Navbar changeView={this.changeView}
           currentView={this.state.currentView}/>
         } */}
-        {view}
+        <Toolbar style={{background:'transparent',boxShadow:'none'}}>
+          <div className='left'>
+            <ToolbarButton style={{color:'white'}} onClick={this.show}>
+            </ToolbarButton>
+          </div>
+        </Toolbar>
+
+        <Splitter>
+          <SplitterSide className='sideMenu'
+            style={{
+              boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)'
+            }}
+            side='left'
+            width={200}
+            collapse={true}
+            swipeable={true}
+            sideMenuIsOpen={this.state.sideMenuIsOpen}
+            onClose={this.hide}
+            onOpen={this.show}
+          >
+            <Page>
+              <ListItem>
+                <i class="zmdi zmdi-edit"></i>
+              Post a hobby</ListItem>
+              <ListItem>
+                <i class="zmdi zmdi-favorite-outline"></i>
+              Your liked hobbies</ListItem>
+            </Page>
+          </SplitterSide>
+          <SplitterContent>
+            {view}
+          </SplitterContent>
+        </Splitter>
       </div>
     );
   }
 }
+
+
 
 // TODO: refractor css with @import '../main.css' to DRY
 

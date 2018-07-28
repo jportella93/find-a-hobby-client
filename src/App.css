@@ -11,3 +11,13 @@ body {
   text-align: center;
   user-select: none;
 }
+
+.sideMenu .page__background {
+  background-color: #FAFAFA;
+  color: black;
+}
+
+i.zmdi {
+  color: black;
+  margin: 5px;
+}

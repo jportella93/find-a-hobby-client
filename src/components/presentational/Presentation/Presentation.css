@@ -45,6 +45,17 @@
   font-style: italic;
 }
 
+.Presentation i {
+  margin: 10px;
+  overflow:unset;
+  vertical-align: unset;
+  font-size: 50px;
+  background-color: inherit;
+  box-shadow: none;
+  width: inherit;
+  height: inherit;
+}
+
 .hobbyName {
   font-weight: bold;
 }

@@ -6,7 +6,7 @@ export default class List extends Component {
   render() {
     return (
       <div className="List">
-        {this.props.hobbies.length > 0
+        {this.props.hobbies && this.props.hobbies.length > 0
           ? this.props.hobbies.map(hobby => {
             return <HobbyMiniCard key={'HobbyMiniCard'+hobby._id} hobby={hobby}/>
           })

@@ -1,6 +1,7 @@
 import getUniqRandomIntArr from './getUniqRandomIntArr';
-export const URL = 'https://find-a-hobby-server.herokuapp.com'
-// export const URL = 'http://192.168.1.191:3000'
+// export const URL = 'https://find-a-hobby-server.herokuapp.com'
+// export const URL = 'http://192.168.1.187:3000'
+export const URL = 'http://localhost:3000'
 
 let token = localStorage.getItem('token');
 

@@ -15,7 +15,7 @@ export default class HobbyCard extends Component {
     return (
       <div className="HobbyCard-wrapper">
         <div className="HobbyCard">
-          <div className='colorHolderWrapper'>
+          <div className="HobbyCard__topBar-wrapper">
             <div className='color1 topBar'>
               <i className="fas fa-dollar-sign"></i>
             </div>
@@ -28,16 +28,22 @@ export default class HobbyCard extends Component {
           </div>
 
           <div className='colorHolder'
-            style={{'gridTemplateColumns': `${this.state.money}%
+          style={{'gridTemplateColumns': `${this.state.money}%
           ${this.state.fit}% ${this.state.creative}%`}}>
             <div className='color1 colorBar'></div>
             <div className='color2 colorBar'></div>
             <div className='color3 colorBar'></div>
           </div>
-          <img src={this.props.hobby.pictures[0].big}
-            alt={this.props.hobby.name}/>
-          <h1>{this.props.hobby.name}</h1>
-          <p>{this.props.hobby.description}</p>
+
+          <div style={{ backgroundImage: `url('${this.props.hobby.pictures[0].big}')`}}
+          className="HobbyCard__img">
+            <div className="HobbyCard__color-holder-mask">
+              <h1>{this.props.hobby.name}</h1>
+              <p>{this.props.hobby.description}</p>
+            </div>
+          </div>
+          {/* <img src={this.props.hobby.pictures[0].big}
+            alt={this.props.hobby.name}/> */}
         </div>
       </div>
     );

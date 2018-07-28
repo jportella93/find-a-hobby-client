@@ -1,1 +1,1 @@
-export { default } from './HobbyCard';
+export { default } from './HobbyCard.jsx';
