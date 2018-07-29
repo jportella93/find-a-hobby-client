@@ -93,6 +93,11 @@ input[type="submit"] {
 
 .PostHobby i {
   margin: 0;
+  overflow: unset;
+  vertical-align: unset;
+  font-size: 60px;
+  background-color: inherit;
+  box-shadow: none;
 }
 
 .PostHobby .tick {
