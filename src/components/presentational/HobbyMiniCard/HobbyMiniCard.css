@@ -1,6 +1,8 @@
 :root {
-  --mini-img-width: 400px;
+  --mini-img-width: 100vw;
   --mini-img-height: 100px;
+  --img-width: 100vw;
+  --img-height: 150px;
 }
 
 a {
@@ -13,14 +15,14 @@ a {
   padding: 10px 0 0 0;
 }
 
-.HobbyMiniCard .colorHolder {
-  width: var(--img-size);
-  height: 150px;
+.HobbyMiniCard .HobbyMiniCard__colorHolder {
+  width: var(--img-width);
+  height: var(--img-height);
   display: grid;
   grid-template-columns: 20% 30% auto;
   position: absolute;
   z-index: -100;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 0 0 10px 10px;
   -webkit-box-shadow: 0px 14px 23px 2px rgba(0,0,0,0.08);
   -moz-box-shadow: 0px 14px 23px 2px rgba(0,0,0,0.08);
@@ -37,4 +39,13 @@ a {
   color: white;
   padding: 0;
   margin: 10px 0;
+}
+
+@media only screen and (min-width: 1025px) {
+  :root {
+    --mini-img-width: 1025px;
+    --mini-img-height: 200px;
+    --img-width: 1025px;
+    --img-height: 250px;
+  }
 }

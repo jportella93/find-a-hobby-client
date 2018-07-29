@@ -15,7 +15,7 @@ export default class HobbyMiniCard extends Component {
     return (
       <a href={this.props.hobby.links[0].getStarted} target="_blank" >
         <div className="HobbyMiniCard">
-          <div className='colorHolder'
+          < div className = "HobbyMiniCard__colorHolder"
             style={{'gridTemplateColumns': `${this.state.money}%
           ${this.state.fit}% ${this.state.creative}%`}}>
             <div className='color1 colorBar'></div>

@@ -2,10 +2,10 @@
 @import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);
 
 .PostHobby form {
-  text-align: left;
   display: flex;
   flex-direction: column;
-  margin: 30px;
+  max-width: 1025px;
+  margin: 30px 20vw;
 }
 
 .range-input {

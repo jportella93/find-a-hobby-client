@@ -2,6 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
+}
+
+.List__title {
+  margin: 5vh;
 }
 
 .List h2 {

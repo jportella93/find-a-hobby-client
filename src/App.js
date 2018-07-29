@@ -6,6 +6,7 @@ import List from './components/functional/List'
 import PostHobby from './components/functional/PostHobby'
 import Logo from './components/presentational/Logo'
 import Presentation from './components/presentational/Presentation'
+import BigScreenMenu from './components/presentational/BigScreenMenu'
 
 class App extends Component {
   constructor (props) {
@@ -54,6 +55,40 @@ class App extends Component {
     : this.setState({currentView: 'Discover'})
   }
 
+  renderBigScreenMenu = () => {
+    const { currentView } = this.state
+    return window.innerWidth >= 1025 && currentView !== 'Logo' && currentView !== 'Presentation'
+    ? < BigScreenMenu changeView = {this.changeView}/>
+    : null
+  }
+
+  renderSideMenu = () => {
+    return window.innerWidth < 1025 ?
+      <SplitterSide className = 'sideMenu'
+      side = 'left'
+      width = {'20%'}
+      collapse = {true}
+      swipeable = {true}
+      sideMenuIsOpen = {this.state.sideMenuIsOpen}
+      onClose = {this.hide}
+      onOpen = {this.show}
+      animation = {'push'}>
+        <Page>
+          <div className = "SideMenu__items-list">
+            <div className = "SideMenu__items-list-mask">
+              <i onClick = {() => this.changeView('PostHobby')} className = "zmdi zmdi-edit" > </i>
+              <i onClick = {() => this.changeView('Discover')} className = "zmdi zmdi-eye" > </i>
+              <i onClick = {() => this.changeView('List')} className = "zmdi zmdi-favorite-outline" > </i> { /* TODO: add this menus for user and settings, icons are already here */ } {
+                /* <i onClick={() => this.changeView('Profile')} class="zmdi zmdi-face"></i>
+                                <i onClick={() => this.changeView('Settings')} class="zmdi zmdi-settings"></i> */
+              }
+            </div>
+          </div>
+        </Page>
+      </SplitterSide>
+    : null
+  }
+
   render() {
     let view;
     switch (this.state.currentView) {
@@ -80,32 +115,11 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Splitter>
-          <SplitterSide className='sideMenu'
-            side='left'
-            width={'20%'}
-            collapse={true}
-            swipeable={true}
-            sideMenuIsOpen={this.state.sideMenuIsOpen}
-            onClose={this.hide}
-            onOpen={this.show}
-            animation={'push'}
-          >
-          <Page>
-            <div className="SideMenu__items-list">
-              <div className="SideMenu__items-list-mask">
-                <i onClick={() => this.changeView('PostHobby')} className="zmdi zmdi-edit"></i>
-                <i onClick={() => this.changeView('Discover')} className="zmdi zmdi-eye"></i>
-                <i onClick={() => this.changeView('List')} className="zmdi zmdi-favorite-outline"></i>
-                {/* TODO: add this menus for user and settings, icons are already here */}
-                {/* <i onClick={() => this.changeView('Profile')} class="zmdi zmdi-face"></i>
-                <i onClick={() => this.changeView('Settings')} class="zmdi zmdi-settings"></i> */}
-              </div>
-            </div>
-          </Page>
-          </SplitterSide>
+        < Splitter style = {{overflow: 'scroll'}} >
+          {this.renderSideMenu()}
           <SplitterContent>
             {view}
+            {this.renderBigScreenMenu()}
           </SplitterContent>
         </Splitter>
       </div>

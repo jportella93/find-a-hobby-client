@@ -12,6 +12,10 @@ body {
   user-select: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .sideMenu .page__background {
   background-color: #FAFAFA;
   color: black;
@@ -43,4 +47,12 @@ body {
   color: white;
   font-size: 10vmax;
   margin:1vmax;
+}
+
+@media only screen and (min-width: 1025px) {
+  .SideMenu__items-list-mask>i {
+    color: white;
+    font-size: 100px;
+    margin: 30px;
+  }
 }

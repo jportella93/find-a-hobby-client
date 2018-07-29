@@ -22,7 +22,6 @@
 }
 
 .dislike {
-  background: black;
   left: 10%;
   margin: 0;
   bottom: 1%;
@@ -32,10 +31,11 @@
 a.box {
   text-decoration: none;
   -webkit-transition: -webkit-transform 0.1s;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 a.box:hover{
@@ -51,7 +51,7 @@ i {
   font-size: 60px;
   text-align: center;
   display: block;
-  margin-top: 10px; /* outside Codepen is actually 30px */
+  margin-top: 10px;
   color:#fff;
   font-family: "Open Sans", arial;
   font-weight:300;
@@ -83,27 +83,21 @@ i.fas.fa-times {
 }
 
 .dislike i {
-  color: black;
+  color: var(--p1-color2);
 }
 
-@media only screen and (min-width: 768px) {
-   /* tablets and desktop */
-}
-
-@media only screen and (max-width: 815px) {
-    /* phones */
-}
-
-@media only screen and (max-width: 415px) and (orientation: portrait) {
-    /* portrait phones */
-}
-
-@media only screen and (max-width: 815px) and (orientation: landscape) {
-  /* .like {
-    right: 20%;
+@media only screen and (min-width:1025px) {
+  .like {
+    right: 30%;
+    margin: 0;
+    bottom: 1%;
+    position: fixed;
   }
 
   .dislike {
-    left: 20%;
-  } */
+    left: 30%;
+    margin: 0;
+    bottom: 1%;
+    position: fixed;
+  }
 }

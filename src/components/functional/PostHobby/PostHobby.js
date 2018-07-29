@@ -108,6 +108,7 @@ export default class PostHobby extends Component {
     return (
       <div className="PostHobby">
         <form onSubmit={this.handleSubmit}>
+          <h1>Post a Hobby</h1>
           <br />
           <input
             type="text"
@@ -145,7 +146,7 @@ export default class PostHobby extends Component {
             placeholder="Picture e.g. https://vegan.me/soup.jpg"
             required
             minLength="1"
-            pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)\.(png)?(jpg)?(gif)?(tiff)?(bmp)?"
+            pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)\.(png)?(jpg)?(jpeg)?(gif)?(tiff)?(bmp)?"
             value={this.state.picture}
             onChange={this.handleInputChange} />
           <br />
