@@ -17,7 +17,30 @@ body {
   color: black;
 }
 
-i.zmdi {
-  color: black;
-  margin: 5px;
+.SideMenu__items-list-mask {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.2+0,0+22 */
+  background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 22%, rgba(0, 0, 0, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 22%, rgba(0, 0, 0, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 22%, rgba(0, 0, 0, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#00000000', GradientType=1);
+  /* IE6-9 */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.SideMenu__items-list {
+  background-color: var(--p1-color3);
+  height: 100%;
+}
+
+.SideMenu__items-list-mask>i {
+  color: white;
+  font-size: 10vmax;
+  margin:1vmax;
 }

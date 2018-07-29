@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { Page, Toolbar, ToolbarButton, Splitter, SplitterSide, SplitterContent,
-ListItem, Icon } from 'react-onsenui';
+import { Page, Splitter, SplitterSide, SplitterContent} from 'react-onsenui';
 import './App.css';
 import Discover from './components/functional/Discover'
 import List from './components/functional/List'
 import PostHobby from './components/functional/PostHobby'
 import Logo from './components/presentational/Logo'
 import Presentation from './components/presentational/Presentation'
-import Navbar from './components/presentational/Navbar'
 
 class App extends Component {
   constructor (props) {
@@ -18,8 +16,10 @@ class App extends Component {
       seenHobbies: [],
       currentView: 'Logo',
       newUser: true,
-      sideMenuIsOpen: false
     }
+  }
+
+  componentDidMount(){
     this.watchForNewUser();
   }
 
@@ -43,8 +43,7 @@ class App extends Component {
 
   watchForNewUser = () => {
     const token = window.localStorage.token;
-    if (token) this.state = ({
-      ...this.state,
+    if (token) this.setState({
       newUser: false
     });
   }
@@ -53,18 +52,6 @@ class App extends Component {
     this.state.newUser
     ? this.setState({currentView: 'Presentation'})
     : this.setState({currentView: 'Discover'})
-  }
-
-  handleSideMenuItemClick = () => {
-    this.hide();
-  }
-
-  hide = () => {
-    this.state = {...this.state, sideMenuIsOpen: false};
-  }
-
-  show = () => {
-    this.state = {...this.state, sideMenuIsOpen: true};
   }
 
   render() {
@@ -79,8 +66,7 @@ class App extends Component {
       case 'Discover':
         view = <Discover passLikedHobby={this.passLikedHobby}
           passDislikedHobby={this.passDislikedHobby}
-          seenHobbies={this.state.seenHobbies}
-               />
+          seenHobbies={this.state.seenHobbies}/>
         break;
       case 'List':
         view = <List hobbies={this.state.likedHobbies}/>
@@ -94,40 +80,29 @@ class App extends Component {
 
     return (
       <div className="App">
-        {/* {this.state.currentView === 'Presentation' ||
-          this.state.currentView === 'Logo'
-            ? null
-            : <Navbar changeView={this.changeView}
-          currentView={this.state.currentView}/>
-        } */}
-        <Toolbar style={{background:'transparent',boxShadow:'none'}}>
-          <div className='left'>
-            <ToolbarButton style={{color:'white'}} onClick={this.show}>
-            </ToolbarButton>
-          </div>
-        </Toolbar>
-
         <Splitter>
           <SplitterSide className='sideMenu'
-            style={{
-              boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)'
-            }}
             side='left'
-            width={200}
+            width={'20%'}
             collapse={true}
             swipeable={true}
             sideMenuIsOpen={this.state.sideMenuIsOpen}
             onClose={this.hide}
             onOpen={this.show}
+            animation={'push'}
           >
-            <Page>
-              <ListItem>
-                <i class="zmdi zmdi-edit"></i>
-              Post a hobby</ListItem>
-              <ListItem>
-                <i class="zmdi zmdi-favorite-outline"></i>
-              Your liked hobbies</ListItem>
-            </Page>
+          <Page>
+            <div className="SideMenu__items-list">
+              <div className="SideMenu__items-list-mask">
+                <i onClick={() => this.changeView('PostHobby')} className="zmdi zmdi-edit"></i>
+                <i onClick={() => this.changeView('Discover')} className="zmdi zmdi-eye"></i>
+                <i onClick={() => this.changeView('List')} className="zmdi zmdi-favorite-outline"></i>
+                {/* TODO: add this menus for user and settings, icons are already here */}
+                {/* <i onClick={() => this.changeView('Profile')} class="zmdi zmdi-face"></i>
+                <i onClick={() => this.changeView('Settings')} class="zmdi zmdi-settings"></i> */}
+              </div>
+            </div>
+          </Page>
           </SplitterSide>
           <SplitterContent>
             {view}
@@ -137,9 +112,5 @@ class App extends Component {
     );
   }
 }
-
-
-
-// TODO: refractor css with @import '../main.css' to DRY
 
 export default App;
