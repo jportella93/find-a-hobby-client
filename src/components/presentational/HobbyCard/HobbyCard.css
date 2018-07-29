@@ -15,8 +15,8 @@
 
 .HobbyCard {
   position: sticky;
-  width: 100%;
-  height: 80%;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   color: white;
 }
@@ -25,8 +25,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  border-bottom: solid white 2px;
-  height: 8vh;
+  height: 9vh;
 }
 
 .topBar {
@@ -66,12 +65,10 @@
 }
 
 .HobbyCard__img {
-  /* object-fit:cover; */
-  /* width: 1fr; */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* height: 100%; */
+  height: 74vh;
   margin: 10px;
   border: white solid 2px;
   border-radius: 5px;
@@ -94,7 +91,7 @@ background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 4%,
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
 /* IE6-9 */
 
-/* height: inherit; */
+width: 100%;
 display: flex;
 flex-direction: column;
 justify-content: flex-end;
@@ -105,11 +102,11 @@ padding-top: 10vh;
 
 .HobbyCard h1 {
   /* margin: 10px 0 0 0; */
-  font-size: 5vh;
+  font-size: 5vmax;
 }
 
 .HobbyCard p {
-  font-size: 2.5vh;
+  font-size: 2.5vmax;
   margin: 0;
 }
 
@@ -117,16 +114,9 @@ padding-top: 10vh;
     /* tablets and desktop */
 }
 
-@media only screen and (max-width: 815px) {
-    /* phones */
+@media only screen and (max-width: 815px) and (orientation: landscape) {
+
 }
 
 @media only screen and (max-width: 415px) and (orientation: portrait) {
-    /* portrait phones */
-  .HobbyCard__img {
-    height: 75vh;
-  }
-  .HobbyCard {
-    height: -webkit-fill-available;
-  }
 }

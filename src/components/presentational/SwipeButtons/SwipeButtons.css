@@ -55,11 +55,11 @@ i {
   color:#fff;
   font-family: "Open Sans", arial;
   font-weight:300;
-   -webkit-font-smoothing:antialiased;
-   -moz-font-smoothing:antialiased;
-   -ms-font-smoothing:antialiased;
-   -o-font-smoothing:antialiased;
-   font-smoothing:antialiased;
+  -webkit-font-smoothing:antialiased;
+  -moz-font-smoothing:antialiased;
+  -ms-font-smoothing:antialiased;
+  -o-font-smoothing:antialiased;
+  font-smoothing:antialiased;
 }
 
 .SwipeButtons i {
@@ -70,8 +70,24 @@ i.fas.fa-times {
   margin: 0;
 }
 
+.like {
+  background: white;
+}
+
+.like i {
+  color: #F90005;
+}
+
+.dislike {
+  background: white;
+}
+
+.dislike i {
+  color: black;
+}
+
 @media only screen and (min-width: 768px) {
-    /* tablets and desktop */
+   /* tablets and desktop */
 }
 
 @media only screen and (max-width: 815px) {
@@ -80,19 +96,14 @@ i.fas.fa-times {
 
 @media only screen and (max-width: 415px) and (orientation: portrait) {
     /* portrait phones */
-    .like {
-      background: white;
-    }
+}
 
-    .like i {
-      color: #F90005;
-    }
+@media only screen and (max-width: 815px) and (orientation: landscape) {
+  /* .like {
+    right: 20%;
+  }
 
-    .dislike {
-      background: white;
-    }
-
-    .dislike i {
-      color: black;
-    }
+  .dislike {
+    left: 20%;
+  } */
 }
