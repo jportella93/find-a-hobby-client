@@ -26,24 +26,26 @@
 
 
 .Logo {
-  position: fixed;
-  top: 30%;
-  left: 0;
-  right: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .Logo h1 {
   font-family: 'Lobster', cursive;
-  font-size: 65px;
+  font-size: 12vmax;
   color: white;
 }
 
 /* Reset of conflicting classes with the i*/
 .Logo i {
+  font-size: 10vmax;
   margin: 40px;
   overflow:unset;
   vertical-align: unset;
-  font-size: 50px;
   background-color: inherit;
   box-shadow: none;
   width: inherit;
