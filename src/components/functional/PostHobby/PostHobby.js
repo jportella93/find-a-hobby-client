@@ -189,7 +189,7 @@ export default class PostHobby extends Component {
           </div>
           <input type="submit" value="Submit" />
           {this.state.submitted
-            ? <h2 className="tick">✅</h2>
+            ? <span role="img" aria-label="Success" className="tick">✅</span>
             : null}
           </form>
       </div>

@@ -3,18 +3,18 @@
 @import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);
 
 .Presentation-wrapper {
-  width: -webkit-fill-available;
-  height: -webkit-fill-available;
+  width: stretch;
+  height: stretch;
 }
 
 .PresentationWrapper-colorHolder {
-  width: -webkit-fill-available;
-  height: -webkit-fill-available;
+  width: stretch;
+  height: stretch;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 .PresentationWrapper-colorBar {
-  height: -webkit-fill-available;
+  height: stretch;
 }
 .Presentation-wrapper.color1 {
   background-color: var(--p1-color1)
