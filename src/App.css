@@ -16,6 +16,12 @@ body {
   display: none;
 }
 
+.App {
+  /* background-image: url(./assets/bg.png); */
+  width:100vw;
+  height: 100vh;
+}
+
 .sideMenu .page__background {
   background-color: #FAFAFA;
   color: black;

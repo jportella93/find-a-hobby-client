@@ -6,6 +6,8 @@
   flex-direction: column;
   max-width: 1025px;
   margin: 30px 20vw;
+  background-color: white;
+  padding:20px;
 }
 
 .range-input {

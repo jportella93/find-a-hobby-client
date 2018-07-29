@@ -5,14 +5,14 @@ export default class BigScreenMenu extends Component {
   render(){
     return (
       <div className="BigScreenMenu">
-        <div className="BigScreenMenu__box">
-          <i onClick={() => this.props.changeView('PostHobby')} className="zmdi zmdi-edit"></i>
+        <div onClick={() => this.props.changeView('PostHobby')} className="BigScreenMenu__box">
+          <i className="zmdi zmdi-edit"></i>
         </div>
-        <div className="BigScreenMenu__box">
-          <i onClick={() => this.props.changeView('Discover')} className="zmdi zmdi-eye"></i>
+        <div onClick={() => this.props.changeView('Discover')} className="BigScreenMenu__box">
+          <i className="zmdi zmdi-eye"></i>
         </div>
-        <div className="BigScreenMenu__box">
-          <i onClick={() => this.props.changeView('List')} className="zmdi zmdi-favorite-outline"></i>
+        <div onClick={() => this.props.changeView('List')} className="BigScreenMenu__box">
+          <i className="zmdi zmdi-favorite-outline"></i>
         </div>
       </div>
     )
