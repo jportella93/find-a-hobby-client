@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="https://imgur.com/W3jHOFM.png" />
+  <a href="http://findahobbyapp.com/">
+  <img src="https://imgur.com/W3jHOFM.png"/>
+  </a>
 </p>
 
 > A web app that will help you discover the most amazing thing to spend your leisure time on.
@@ -110,7 +112,7 @@ Some ideas i'm planning to do:
 
 ## Author
 
-Jon Portella - [Github](https://github.com/jportella93) - [LinkedIn](https://www.linkedin.com/in/jonportella/)
+Jon Portella - [Github](https://github.com/jportella93) - [LinkedIn](https://www.linkedin.com/in/jonportella/) - [Twitter](https://twitter.com/jportella93)
 
 
 ## License
