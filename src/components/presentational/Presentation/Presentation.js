@@ -23,7 +23,7 @@ export default class Presentation extends Component {
               <i className="fas fa-football-ball"></i> <br />
               <br />
               and one to be <span className='hobbyName'>creative</span>."<br />
-              <i className="fab fa-fly"></i>
+              <i className="fas fa-plane"></i>
             </h3>
           </div>
         </div>

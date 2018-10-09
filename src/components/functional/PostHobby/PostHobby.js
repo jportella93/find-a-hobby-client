@@ -176,7 +176,7 @@ export default class PostHobby extends Component {
               onChange={this.handleBarsChange} />
             <br />
             <label className='creative-label'>
-              <i className="fab fa-fly"></i>
+              <i className="fas fa-plane"></i>
             </label>
             <input
               name="creative"
