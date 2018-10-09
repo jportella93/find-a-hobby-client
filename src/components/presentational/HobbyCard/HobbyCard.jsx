@@ -23,7 +23,7 @@ export default class HobbyCard extends Component {
               <i className="fas fa-football-ball"></i>
             </div>
             <div className='color3 topBar'>
-              <i className="fab fa-fly"></i>
+              <i className="fas fa-plane"></i>
             </div>
           </div>
 

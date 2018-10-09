@@ -15,7 +15,7 @@ export default class Logo extends Component {
             <div style={{ display: 'flex', justifyContent: 'space-evenly'}}>
               <i className="fas fa-dollar-sign"></i>
               <i className="fas fa-football-ball"></i>
-              <i className="fab fa-fly"></i>
+              <i className="fas fa-plane"></i>
             </div>
           </div>
         </div>
