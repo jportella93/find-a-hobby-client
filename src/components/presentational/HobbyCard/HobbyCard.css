@@ -48,6 +48,10 @@
   height: inherit;
 }
 
+i.fab.fa-fly {
+  font-family: Font Awesome\ 5 Brands;
+}
+
 .color1 {
   background-color: var(--p1-color1);
 }
