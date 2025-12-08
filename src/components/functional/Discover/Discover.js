@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import FetchingHobbiesSpinner from '../../presentational/FetchingHobbiesSpinner';
+import HobbyCard from '../../presentational/HobbyCard';
+import SwipeButtons from '../../presentational/SwipeButtons';
 import './Discover.css';
-import HobbyCard from '../../presentational/HobbyCard'
-import SwipeButtons from '../../presentational/SwipeButtons'
-import FetchingHobbiesSpinner from '../../presentational/FetchingHobbiesSpinner'
 
-import ApiClient from '../../../lib/apiClient';
 import discardSeenHobbies from '../../../functions/discardSeenHobbies';
+import ApiClient from '../../../lib/apiClient';
 
 const numberOfCards = 3;
 const neededCardsLeftToRefresh = 2;
@@ -43,11 +43,12 @@ export default class Discover extends Component {
     }
 
     // console.log('setting new hobbies:',randomHobbies);
+    const updatedHobbies = [...randomHobbies, ...this.state.hobbies];
     this.setState({
-      hobbies: [...randomHobbies, ...this.state.hobbies],
+      hobbies: updatedHobbies,
       loading: false
     });
-    this.handleNoHobbies()
+    this.handleNoHobbies(updatedHobbies)
   }
 
   handleOnLike = () => {
@@ -60,7 +61,7 @@ export default class Discover extends Component {
     hobbies.pop();
     this.setState({hobbies});
     this.setHobbies();
-    this.handleNoHobbies();
+    this.handleNoHobbies(hobbies);
   }
 
   handleOnDislike = () => {
@@ -72,11 +73,17 @@ export default class Discover extends Component {
     hobbies.pop();
     this.setState({hobbies});
     this.setHobbies();
-    this.handleNoHobbies();
+    this.handleNoHobbies(hobbies);
   }
 
-  handleNoHobbies = () => {
-    if (this.state.hobbies.length !== 0) return;
+  handleNoHobbies = (currentHobbies = this.state.hobbies) => {
+    if (currentHobbies.length !== 0) {
+      // Reset noHobbies to false if we have hobbies
+      if (this.state.noHobbies) {
+        this.setState({ noHobbies: false });
+      }
+      return;
+    }
     this.setState({
       noHobbies: true,
       loading:true

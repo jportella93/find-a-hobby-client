@@ -36,9 +36,7 @@ const getRandomHobbies = async () => {
 
   let randomHobbies = [];
   for (let i = 0; i < hobbiesLGTH; i++) {
-    // console.log(randomHobbies);
-    randomHobbies.push(hobbies[randArr[randArr.length - 1]])
-    randArr.pop();
+    randomHobbies.push(hobbies[randArr[i]])
   }
 
   return randomHobbies;
