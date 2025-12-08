@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './HobbyCard.css'
+import './HobbyCard.css';
 
 export default class HobbyCard extends Component {
   constructor (props) {
@@ -9,6 +9,22 @@ export default class HobbyCard extends Component {
       fit: this.props.hobby.tags[1].average,
       creative: this.props.hobby.tags[2].average
     }
+  }
+
+  getImageUrl() {
+    const pictures = this.props.hobby.pictures;
+    if (!pictures || pictures.length === 0) return '';
+
+    const firstPicture = pictures[0];
+
+    // Check for url first (actual API property)
+    if (firstPicture.url) return firstPicture.url;
+
+    // Fallback to big and thumbnail for backward compatibility
+    if (firstPicture.big) return firstPicture.big;
+    if (firstPicture.thumbnail) return firstPicture.thumbnail;
+
+    return '';
   }
 
   render() {
@@ -35,7 +51,7 @@ export default class HobbyCard extends Component {
             <div className='color3 colorBar'></div>
           </div>
 
-          <div style={{ backgroundImage: `url('${this.props.hobby.pictures[0].big}')`}}
+          <div style={{ backgroundImage: `url('${this.getImageUrl()}')`}}
           className="HobbyCard__img">
             <div className="HobbyCard__color-holder-mask">
               <h1>{this.props.hobby.name}</h1>
