@@ -1,10 +1,10 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'onsenui/css/onsen-css-components.css';
+import 'onsenui/css/onsenui.css';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
-import 'onsenui/css/onsenui.css';
-import 'onsenui/css/onsen-css-components.css';
 import App from './App';
+import './index.css';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
