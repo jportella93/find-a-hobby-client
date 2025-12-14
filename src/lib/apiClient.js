@@ -1,20 +1,11 @@
 import getUniqRandomIntArr from './getUniqRandomIntArr';
-
-// Function to get API URL at runtime
-const getApiUrl = () => {
-  // Check for runtime environment variable first
-  if (process.env.REACT_APP_API_URL) {
-    return process.env.REACT_APP_API_URL;
-  }
-  // Fallback for development
-  return 'http://localhost:3000';
-};
+export const URL = process.env.REACT_APP_API_URL
 
 let token = localStorage.getItem('token');
 
 
 const apiFetch = (path, originalOptions = {}, ...rest) => {
-  const url = `${getApiUrl()}${path}`
+  const url = `${URL}${path}`
   const options = {
     ...originalOptions,
     headers: {
