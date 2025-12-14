@@ -1,5 +1,5 @@
 import getUniqRandomIntArr from './getUniqRandomIntArr';
-export const URL = process.env.REACT_APP_API_URL
+export const URL = process.env.REACT_APP_API_URL || 'http://137.184.87.116:3000' 
 
 let token = localStorage.getItem('token');
 
