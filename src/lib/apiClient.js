@@ -1,7 +1,5 @@
 import getUniqRandomIntArr from './getUniqRandomIntArr';
-// export const URL = 'https://find-a-hobby-server.herokuapp.com'
-// export const URL = 'http://192.168.1.187:3000'
-export const URL = 'http://localhost:3000'
+export const URL = process.env.REACT_APP_API_URL 
 
 let token = localStorage.getItem('token');
 
