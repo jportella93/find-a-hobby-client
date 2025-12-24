@@ -97,9 +97,12 @@ export default class PostHobby extends Component {
       ]
     }
 
-    apiClient.postHobby(formattedHobby);
-
-    this.setState({submitted:true});
+    try {
+      await apiClient.postHobby(formattedHobby);
+      this.setState({ submitted: true });
+    } catch (_) {
+      this.setState({ submitted: false });
+    }
 
     event.preventDefault();
   }
