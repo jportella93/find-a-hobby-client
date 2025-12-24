@@ -93,7 +93,23 @@ Now you will be able to post and like hobbies with the deployed production datab
 If you want to use a clean local and fast database (recommended for development):
 
 1. start development server following instructions of https://github.com/jportella93/find-a-hobby-server
-2. In /src/lib/apiClient.js, change the variable URL to point to your IP address followed by the port where you are runnning the server. For example: const URL = 'http://192.168.1.191:3000'
+2. Create a `.env` file (see `.env.example`) and set `REACT_APP_API_URL` to your server URL (for example: `http://192.168.1.191:3000`).
+
+## Deployment (portfolio/demo)
+
+This repository is **client-side React** and is ready to deploy to **Cloudflare Pages** (static hosting).
+
+- **Build output**: `build/`
+- **Build command**: `npm run build` (also configured in `wrangler.toml`)
+
+### Environment variables
+
+- **`REACT_APP_API_URL`**: Optional backend API base URL (e.g. `https://your-api.example.com`).
+- **`REACT_APP_DEMO_MODE`**: If set to `true`, the app runs without any backend and uses local demo data.
+
+### No-backend demo mode (recommended for portfolios)
+
+If the API is unavailable or misconfigured, the app automatically falls back to demo data so the UI remains usable on Cloudflare Pages.
 
 ## Built with
 

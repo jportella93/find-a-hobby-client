@@ -14,7 +14,7 @@ export default class FetchingHobbiesSpinner extends Component {
         {this.props.noHobbies
           ? <h2>Those were all the hobbies <br/> in the database! <br /> What about posting one?</h2>
           : <div>
-            <svg viewBox="0 0 60 55" width="200" height="100" className = 'nig'>
+            <svg viewBox="0 0 60 55" width="200" height="100" className="spinner">
               <defs>
                 <filter id="poo">
                   <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="4" />
@@ -53,7 +53,7 @@ export default class FetchingHobbiesSpinner extends Component {
                 keySplines=".6 .01 .36 .99; .6 .01 .36 .99;"
               keyTimes="0; 0.5; 1" to="60" dur=".5s" repeatCount="indefinite" />
             </svg>
-            <svg viewBox="0 0 60 55" width="200" height="100" className = 'nig'>
+            <svg viewBox="0 0 60 55" width="200" height="100" className="spinner">
               <defs>
                 <filter id="poo">
                   <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="4" />
@@ -92,7 +92,7 @@ export default class FetchingHobbiesSpinner extends Component {
                 keySplines=".6 .01 .36 .99; .6 .01 .36 .99;"
               keyTimes="0; 0.5; 1" to="60" dur=".5s" repeatCount="indefinite" />
             </svg>
-            <svg viewBox="0 0 60 55" width="200" height="100" className = 'nig'>
+            <svg viewBox="0 0 60 55" width="200" height="100" className="spinner">
               <defs>
                 <filter id="poo">
                   <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="4" />
