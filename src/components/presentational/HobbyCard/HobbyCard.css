@@ -38,7 +38,7 @@
 }
 
 /* Reset of conflicting classes with the i*/
-.topBar i, .topBar>i.fab.fa-fly {
+.topBar i, .topBar>i.fas.fa-plane {
   font-size: 5.9vh;
   background-color: inherit;
   box-shadow: none;
